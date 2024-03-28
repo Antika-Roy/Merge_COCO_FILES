@@ -43,7 +43,7 @@ def combine(tt1,tt2,output_file):
         d2 = json.load(json_file)
     b1={}
     for i,j in enumerate(d1['images']):
-        b1[d1['images'][i]['id']]=i
+        b1[d1['images'][i]['id']]=i+1 #Antika
 
     temp=[cc['file_name'] for cc in d1['images']]
     temp2=[cc['file_name'] for cc in d2['images']]
@@ -103,7 +103,7 @@ def combine(tt1,tt2,output_file):
     #Reset File 1 and 2 annotations ids
     b3={}
     for i,j in enumerate(d1['annotations']):
-        b3[d1['annotations'][i]['id']]=i
+        b3[d1['annotations'][i]['id']]=i+1 #Antika
     b4={}
     for i,j in enumerate(d2['annotations']):
         b4[d2['annotations'][i]['id']]=max(b3)+i+1
